@@ -1,5 +1,4 @@
 
-define ['jquery'], ($) ->
-	debugger
+define ['jquery', 'module/test'], ($) ->
 	console.log("index loaded")
 
