@@ -6,5 +6,9 @@
 		<li><a href="{{ user.url }}">{{ user.username }}</a></li>
 	{% endfor %}
 	</ul>
-	<script src="/js/require.js" data-main="js/app/page/index" async="async"></script>
+{% endblock %}
+{% block tail %}
+	<script type="text/javascript">
+		require(['app/page/index']);
+	</script>
 {% endblock %}

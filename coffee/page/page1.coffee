@@ -1,2 +1,6 @@
 
-console.log("page1 loaded");
+
+define ['jquery'], ($) ->
+	debugger
+	console.log("page1 loaded");
+
