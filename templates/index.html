@@ -1,11 +1,9 @@
 {% extends "master.html" %}
 {% block body %}
 	<p>Some content for root page</p>
-	<ul>
-	{% for user in users %}
-		<li><a href="{{ user.url }}">{{ user.username }}</a></li>
-	{% endfor %}
-	</ul>
+	
+	<div id="box"></div>
+	 
 {% endblock %}
 {% block tail %}
 	<script type="text/javascript">

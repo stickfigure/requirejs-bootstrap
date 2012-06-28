@@ -17,6 +17,12 @@
 		<script type="text/javascript" charset="utf8" src="/js/moment.min.js"></script>
 		-->
 
+		<!-- 
+			Synchronously loading this eliminates any dependency issues with jquery plugins, and means we don't have to
+			be concerned about using the shim (which is incompatible with CDN-loaded jquery and the optimizer).  In practice
+			this should not be a significant hit since it will almost always already be in the user's cache.  
+		-->
+		<script type="text/javascript" charset="utf8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min"></script>
 		<script type="text/javascript" src="/js/require.js"></script>
 		<script type="text/javascript">
 			require.config({
