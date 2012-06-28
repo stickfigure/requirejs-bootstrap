@@ -1,2 +1,2 @@
 define ->
-	console.log 'test.js'
+	logit: -> console.log 'test.js'
