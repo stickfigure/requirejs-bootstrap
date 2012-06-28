@@ -1,0 +1,4 @@
+cron:
+- description: hourly checkup
+  url: /cron/hourly
+  schedule: every 1 hours
