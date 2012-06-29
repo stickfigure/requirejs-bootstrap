@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<!--
+	Lets us run some basic tooling.
+-->
+
+<project name="requirejs-bootstrap" default="optimize" basedir=".">
+
+	<property name="name" value="${ant.project.name}" />
+
+	<property file="user.properties" />
+	<property file="${user.home}/build.properties" />
+	<property file="build.properties" />
+
+	<property name="app.dir" location="js/app" />
+	<property name="out.dir" location="out" />
+
+	<target name="optimize">
+		<delete dir="${out.dir}" />
+		<mkdir dir="${out.dir}" />
+
+		<apply executable="r.js"> 
+			<arg value="-o"/> 
+			<srcfile prefix="name="/> 
+			<targetfile prefix="out=${out.dir}/"/> 
+			<arg value="baseUrl=js"/> 
+			
+			<fileset dir="${app.dir}" casesensitive="yes">
+				<include name="**/*.js"/>
+			</fileset>
+			<mapper type="flatten"/>
+		</apply>
+	</target>
+</project>
