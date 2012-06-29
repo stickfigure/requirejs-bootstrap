@@ -19,11 +19,13 @@
 		<delete dir="${out.dir}" />
 		<mkdir dir="${out.dir}" />
 
-		<apply executable="r.js"> 
+		<apply executable="r.js" dir="js" dest="${out.dir}" relative="true">
 			<arg value="-o"/> 
-			<srcfile prefix="name="/> 
-			<targetfile prefix="out=${out.dir}/"/> 
-			<arg value="baseUrl=js"/> 
+			<srcfile prefix="name=app/"/> 
+			<targetfile prefix="out="/> 
+			<arg value="baseUrl=js"/>
+			<!--
+			--> 
 			
 			<fileset dir="${app.dir}" casesensitive="yes">
 				<include name="**/*.js"/>
